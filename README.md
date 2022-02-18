@@ -166,3 +166,128 @@ namespace ex5<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/154625531-6c4ec6db-eff8-48f2-b9be-0e17a431e302.png)
 
+
+3. C# PROGRAMTO ILLIUSTRATE MULTILEVEL INHERITANCE WITH VIRTUAL METHOD
+
+using System;
+
+namespace exam3<br>
+{
+   
+        class PersonalDetails<br>
+        {
+            string name;<br>
+            int age;<br>
+            string gender;<br>
+            public PersonalDetails(string name, int age, string gender)<br>
+            {
+                this.name = name;<br>
+                this.age = age;<br>
+                this.gender = gender;<br>
+            }
+            public virtual void Display()<br>
+            {
+                Console.WriteLine("\n-------- PERSONAL DETAILS --------\n");<br>
+                Console.WriteLine("Name : " + name);<br>
+                Console.WriteLine("Age : " + age);<br>
+                Console.WriteLine("Gender : " + gender);<br>
+            }
+        }
+        class CourseDetails : PersonalDetails<br>
+        {
+            int regNo;<br>
+            string course;<br>
+            int semester;<br>
+            public CourseDetails(string name, int age, string gender, int regNo, string course, int semester) : base(name, age, gender)<br>
+            {
+                this.regNo = regNo;<br>
+                this.course = course;<br>
+                this.semester = semester;<br>
+            }
+            public override void Display()<br>
+            {
+                base.Display();<br>
+                Console.WriteLine("\n-------- COURSE DETAILS --------\n");<br>
+
+                Console.WriteLine("Register Number : " + regNo);<br>
+                Console.WriteLine("Course : " + course);<br>
+                Console.WriteLine("Semester : " + semester);<br>
+            }
+        }
+        class MarksDetails : CourseDetails<br>
+        {
+            int[] marks = new int[5];<br>
+            int total;<br>
+            float average;<br>
+            string grade;<br>
+            int flagFail;<br>
+            public MarksDetails(string name, int age, string gender, int regNo, string course, int semester, int[] marks) : base(name, age, gender, regNo, course, semester)<br>
+            {
+                total = 0;<br>
+                for (int i = 0; i < 5; i++)<br>
+                {
+                    this.marks[i] = marks[i];<br>
+                    total += marks[i];<br>
+                    if (marks[i] < 35)<br>
+                    {
+                        flagFail = 1;<br>
+                    }
+                }
+                Calculate();<br>
+            }
+            private void Calculate()<br>
+            {
+                average = total / 5;<br>
+                if (flagFail == 1 || average < 40)<br>
+                    grade = "Fail";<br>
+                else if (average >= 70)<br>
+                    grade = "Distinction";<br>
+                else if (average >= 60)<br>
+                    grade = "First Class";<br>
+                else if (average >= 50)<br>
+                    grade = "Second Class";<br>
+
+
+                else<br>
+                    grade = "Pass Class";<br>
+            }
+            public override void Display()<br>
+            {
+                base.Display();
+                Console.WriteLine("\n-------- MARKS DETAILS --------\n");<br>
+                Console.Write("Marks in 5 subjects: ");<br>
+                for (int i = 0; i < 5; i++)<br>
+                    Console.Write(marks[i] + " ");<br>
+                Console.WriteLine();<br>
+                Console.WriteLine("Total : " + total);<br>
+                Console.WriteLine("Average : " + average);<br>
+                Console.WriteLine("Grade : " + grade);<br>
+            }
+        }
+        class MultiLevel<br>
+        {
+            public static void Main(string[] args)<br>
+            {
+                MarksDetails Student1 = new MarksDetails("Abhijith", 22, "Male", 20190001, "MCA", 5, new int[] { 77, 80, 98, 95, 90 });<br>
+                Student1.Display();<br>
+            }
+        }
+   }
+    
+    
+![image](https://user-images.githubusercontent.com/97940767/154630114-7a9a1632-5e41-478f-960b-6b0b5e49de55.png)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+
+    
+
