@@ -119,5 +119,50 @@ namespace ex4<br>
 ![image](https://user-images.githubusercontent.com/97940767/154624040-0c7e13ef-9c19-45d3-b4e2-1a0ec4509a23.png)
 
 
+5.C# PROGRAM TO CALCULATE VOLUME OF 2 BOXES AND FIND THE RESULTANT VOLUME AFTER ADDITION OF TWO BOXES BY IMPLIMENTING OPERATING OPERLOADING
+
+
+  using System;
+
+namespace ex5<br>
+{
+    class Box<br>
+    {
+        float width;<br>
+        float height;<br>
+        float length;<br>
+        public float volume<br>
+        {
+            get { return width * height * length; }<br>
+        }
+        public Box(float width, float height, float length)<br>
+        {
+            this.width = width;<br>
+            this.height = height;<br>
+            this.length = height;<br>
+        }
+        public static float operator+(Box box1, Box box2)<br>
+        {
+            return box1.volume + box2.volume;<br>
+        }
+        public override string ToString()<br>
+        {
+            return "box with width" + width + ",height" + height + "and length" + length;<br>
+        }
+    }
+    class OperatingOverloading<br>
+    {
     
+       public static void Main()<br>
+        {
+            Box box1 = new Box(10, 20, 30);<br>
+            Box box2 = new Box(25, 32, 15); <br>
+            Console.WriteLine("volume of {0}is:{1}",box1,box1.volume);<br>
+            Console.WriteLine("volume of {0}is:{1}",box2,box2.volume);<br>
+            Console.WriteLine("volume after adding boxes:{0}", box1 + box2);<br>
+        }<br>
+    }<br>
+}  <br>
+
+![image](https://user-images.githubusercontent.com/97940767/154625531-6c4ec6db-eff8-48f2-b9be-0e17a431e302.png)
 
