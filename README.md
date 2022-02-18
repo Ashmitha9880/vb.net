@@ -1,4 +1,4 @@
-c# program to print a statement hello
+
 using System;
 
 namespace ex1<br>
@@ -14,7 +14,7 @@ namespace ex1<br>
 
 
 
-2.   c# program to amicable numbers
+**2.   c# program to amicable numbers**
 using System;
 
 namespace ex2<br>
@@ -58,8 +58,8 @@ namespace ex2<br>
 ![image](https://user-images.githubusercontent.com/97940767/154622485-f1a8265b-c1d0-4b3e-abe3-ff0a9a422ec3.png)
 
 
-1. PRINT A BINARY TRIANGLE
-
+**1. PRINT A BINARY TRIANGLE
+**
 using System;
 
 namespace example1<br>
@@ -92,7 +92,7 @@ namespace example1<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/154623042-af715743-a4fa-4463-9c3a-a9bc680697dc.png)
 
-4. CREATE A GRAY CODE
+**4. CREATE A GRAY CODE**
 
 using System;
 
@@ -119,8 +119,8 @@ namespace ex4<br>
 ![image](https://user-images.githubusercontent.com/97940767/154624040-0c7e13ef-9c19-45d3-b4e2-1a0ec4509a23.png)
 
 
-5.C# PROGRAM TO CALCULATE VOLUME OF 2 BOXES AND FIND THE RESULTANT VOLUME AFTER ADDITION OF TWO BOXES BY IMPLIMENTING OPERATING OPERLOADING
-
+**5.C# PROGRAM TO CALCULATE VOLUME OF 2 BOXES AND FIND THE RESULTANT VOLUME AFTER ADDITION OF TWO BOXES BY IMPLIMENTING OPERATING OPERLOADING
+**
 
   using System;
 
@@ -281,7 +281,7 @@ namespace exam3<br>
     
     
     
-  6. C# PROGRAM TO IMPLEMENT OF DELEGATES
+ ** 6. C# PROGRAM TO IMPLEMENT OF DELEGATES**
    
    using System;
 
@@ -329,7 +329,7 @@ namespace ex6<br>
     
     
     
-  7. C# PROGRAM TO GENERATE REGISTER NUMBER AUTOMATICALLY FOR 100 STUDENTS USING STATIC CONSTRUCTOR
+  **7. C# PROGRAM TO GENERATE REGISTER NUMBER AUTOMATICALLY FOR 100 STUDENTS USING STATIC CONSTRUCTOR**
 
      
      using System;
@@ -367,9 +367,9 @@ namespace ex7
 ![image](https://user-images.githubusercontent.com/97940767/154632110-fc6fa501-5cdf-4456-ac7d-dd1690c0a87d.png)
 
 
-8.. C# PROGRAM TO FIND THE FREQUENCY OF THE WORD "IS" IN A GIVEN SENTENCE
+**8.. C# PROGRAM TO FIND THE FREQUENCY OF THE WORD "IS" IN A GIVEN SENTENCE
 
-
+**
 using System;
 
 namespace ex8<br>
@@ -404,7 +404,7 @@ namespace ex8<br>
 
 
 
-9.PROGRAM TO BENCHMARK 2D JAGGED ARRAY ALLOCATION USING SYSTEM
+**9.PROGRAM TO BENCHMARK 2D JAGGED ARRAY ALLOCATION USING SYSTEM**
 
 using System;
 using System.Diagnostics;<br>
@@ -521,7 +521,7 @@ namespace ex10<br>
 
 
 
-
+**11. CREATE A FILE CHECK THE EXISTANCE OF A FILE AND READ THE CONTENT OF THE FILE **
 
 
 
