@@ -281,7 +281,7 @@ namespace exam3<br>
     
     
     
-   C# PROGRAM TO IMPLEMENT OF DELEGATES
+  6. C# PROGRAM TO IMPLEMENT OF DELEGATES
    
    using System;
 
@@ -329,7 +329,74 @@ namespace ex6<br>
     
     
     
-  
+  7. C# PROGRAM TO GENERATE REGISTER NUMBER AUTOMATICALLY FOR 100 STUDENTS USING STATIC CONSTRUCTOR
+
+     
+     using System;
+
+namespace ex7
+{
+    class RigisterNum<br>
+    {
+        int regno;<br>
+        static int StartNum;<br>
+        
+        static RigisterNum()<br>
+        {
+            StartNum = 20210000;<br>
+        }
+        RigisterNum()<br>
+        {
+            regno = ++StartNum;<br>
+
+        }
+        public static void Main(string[] args)<br>
+        {
+            for(int i=0;i<100;i++)<br>
+            {
+                RigisterNum student = new RigisterNum();<br>
+                Console.WriteLine("student{0}:{1}", i + 1, student.regno);<br>
+            }
+           
+        }
+    }
+}
+
+
+![image](https://user-images.githubusercontent.com/97940767/154632035-c37bf9af-d0ac-48e1-b2fe-5864bee2e40c.png)
+![image](https://user-images.githubusercontent.com/97940767/154632110-fc6fa501-5cdf-4456-ac7d-dd1690c0a87d.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     
 
