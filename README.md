@@ -367,7 +367,39 @@ namespace ex7
 ![image](https://user-images.githubusercontent.com/97940767/154632110-fc6fa501-5cdf-4456-ac7d-dd1690c0a87d.png)
 
 
+8.. C# PROGRAM TO FIND THE FREQUENCY OF THE WORD "IS" IN A GIVEN SENTENCE
 
+
+using System;
+
+namespace ex8<br>
+{
+    class FrequencyIS<br>
+    {
+        static void Main(string[] args)<br>
+        {
+            int count = 0;<br>
+            string inputstring;<br>
+
+            Console.WriteLine("\n......Frequency of word 'is'.......");<br>
+            Console.Write("\n enter the input string");<br>
+            inputstring = Console.ReadLine();<br>
+            char[] separator = { ',', '.', '!', ' ', '\n' };<br>
+            string teststring = inputstring.ToLower();<br>
+            string[] outcomes = teststring.Split(separator);<br>
+            foreach (string s in outcomes)<br>
+            {
+                Console.WriteLine(s);<br>
+                if (s == "is")<br>
+                    count++;<br>
+            }
+                Console.WriteLine("\n number of 'is' in " + inputstring + "is:" + count);<br>
+            
+        }
+    }
+}
+
+![image](https://user-images.githubusercontent.com/97940767/154633180-e03f0005-ad5b-4442-b448-fec44f0bc887.png)
 
 
 
