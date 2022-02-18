@@ -281,7 +281,51 @@ namespace exam3<br>
     
     
     
-    
+   C# PROGRAM TO IMPLEMENT OF DELEGATES
+   
+   using System;
+
+namespace ex6<br>
+{<br>
+    class Delegates<br>
+
+    {
+        delegate string UppercaseDelegates(string input);<br>
+        static string UppercaseFirst(string input)<br>
+        {
+        char[] buffer = input.ToCharArray();<br>
+        buffer[0]=char.ToUpper(buffer[0]);<br>
+        return new string (buffer);<br>
+        }
+    static string UppercaseLast(string input)<br>
+    {
+        char[] buffer = input.ToCharArray();<br>
+        buffer[buffer.Length - 1] = char.ToUpper(buffer[buffer.Length - 1]);<br>
+        return new string(buffer);<br>
+    }<br>
+    static string UppercaseAll(string input)<br>
+    {
+        return input.ToUpper();<br>
+    }
+    static void WriteOutput(string input,UppercaseDelegates del)<br>
+    {
+        Console.WriteLine("Input string:{0}", input);<br>
+        Console.WriteLine("Onput string:{0}",del (input));<br>
+
+    }
+    static void Main()<br>
+        {
+        WriteOutput("tom", new UppercaseDelegates(UppercaseFirst));<br>
+        WriteOutput("tom", new UppercaseDelegates(UppercaseLast));<br>
+        WriteOutput("tom", new UppercaseDelegates(UppercaseAll));<br>
+        Console.ReadLine();<br>
+        }<br>
+    }<br>
+}<br>
+
+![image](https://user-images.githubusercontent.com/97940767/154630924-250ca30c-4583-4106-a4be-28babe6304e0.png)
+
+
     
     
     
