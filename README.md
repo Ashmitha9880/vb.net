@@ -463,10 +463,61 @@ namespace ex9<br>
 
 
 
+10. PROGRAM TO FIND THE SUM OF VALUE ON DIAGONAL OF A MATRIX
 
 
+using System;
 
+namespace ex10<br>
+{
+    class SumOfDiagonals<br>
+    {
+        static void Main(string[] args)<br>
+        {
+            int maxRow, maxCol, sum = 0;<br>
+            int[,] matrix;<br>
+            Console.WriteLine("\n SUM OF DIAGONAL OF A MATRIX.....\n");<br>
+            Console.WriteLine("\n enter the number of rows:");<br>
+            maxRow = Convert.ToInt32(Console.ReadLine());<br>
+            Console.WriteLine("\n enter the number of coloumns:");<br>
+            maxCol = Convert.ToInt32(Console.ReadLine());<br>
+            if(maxRow!=maxCol)<br>
+            {
+                Console.WriteLine("\n the Dimensional entered are not of square matrix");<br>
+                Console.WriteLine("\n  Exiting the program");<br>
+                return;<br>
+            }
+            matrix = new int[maxRow, maxCol];<br>
+            for(int i=0; i<maxRow; i++)<br>
+            {
+                for (int j = 0; j< maxCol; j++)<br>
+                {
+                    Console.Write("\n enter the ({0},{1}) th element of the matrix", (i + 1), (j + 1));<br>
+                    matrix[i, j] = Convert.ToInt32(Console.ReadLine());<br>
 
+                }
+            }
+            Console.WriteLine("\n the entered matrix is:");<br>
+            for(int i=0;i<maxRow;i++)<br>
+            {
+                for (int j = 0; j < maxCol; j++)<br>
+                {
+                    Console.Write(" " + matrix[i, j]);<br>
+                    if(i==j)<br>
+                    {
+                        sum += matrix[i, j];<br>
+                    }
+                }
+                Console.WriteLine();<br>
+            }
+            Console.WriteLine("\n the sum of Diagonal is " + sum);<br>
+             
+        }
+    }
+}
+
+![image](https://user-images.githubusercontent.com/97940767/154634589-86b2e181-8d7f-4ef6-8b1b-7cd50795c6d8.png)
+![image](https://user-images.githubusercontent.com/97940767/154634665-0b898312-1783-4273-a87d-80d1f761639b.png)
 
 
 
