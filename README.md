@@ -14,7 +14,7 @@ namespace ex1<br>
 
 
 
-3.   c# program to amicable numbers
+2.   c# program to amicable numbers
 using System;
 
 namespace ex2<br>
@@ -58,7 +58,7 @@ namespace ex2<br>
 ![image](https://user-images.githubusercontent.com/97940767/154622485-f1a8265b-c1d0-4b3e-abe3-ff0a9a422ec3.png)
 
 
-2. PRINT A BINARY TRIANGLE
+1. PRINT A BINARY TRIANGLE
 
 using System;
 
@@ -92,4 +92,32 @@ namespace example1<br>
 
 ![image](https://user-images.githubusercontent.com/97940767/154623042-af715743-a4fa-4463-9c3a-a9bc680697dc.png)
 
+4. CREATE A GRAY CODE
+
+using System;
+
+namespace ex4<br>
+{
+    class Graycode<br>
+    {
+        static int getGray(int n)<br>
+        {
+            return n ^ (n >> 1);<br>
+        }
+        static void Main(string[] args)<br>
+        {
+            int InputNum, GrayNum;<br>
+            Console.WriteLine(" ENTER THE DECIMAL NUMBER");<br>
+            InputNum = Convert.ToInt32(Console.ReadLine());<br>
+            Console.WriteLine("\n Binary equivalent of {0}:{1}", InputNum, Convert.ToString(InputNum, 2));<br>
+            GrayNum = getGray(InputNum);<br>
+            Console.WriteLine("\n Graycode equivalent of {0}:{1}", InputNum, Convert.ToString(GrayNum, 2));<br>
+        }
+    }
+}
+
+![image](https://user-images.githubusercontent.com/97940767/154624040-0c7e13ef-9c19-45d3-b4e2-1a0ec4509a23.png)
+
+
+    
 
