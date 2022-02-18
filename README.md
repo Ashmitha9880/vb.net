@@ -404,6 +404,64 @@ namespace ex8<br>
 
 
 
+9.PROGRAM TO BENCHMARK 2D JAGGED ARRAY ALLOCATION USING SYSTEM
+
+using System;
+using System.Diagnostics;<br>
+namespace ex9<br>
+{
+    class BenchmarkAllocation<br>
+    {
+        const int max = 100000;<br>
+
+        static void Main(string[] args)<br>
+        {
+            var Arr2D = new int[100, 100];<br>
+             var ArrJagged = new int[100][];<br>
+            for (int i = 0; i < 100; i++)<br>
+            {
+                ArrJagged[i] = new int[100];<br>
+            }
+            var Stopwatch2D = Stopwatch.StartNew();<br>
+            for (int i = 0; i < max; i++)<br>
+            {
+                for (int k = 0; k < 100; k++)<br>
+                {
+                    for (int j = 0; j < 100; j++)<br>
+                        Arr2D[j, k] = k;<br>
+
+
+                }
+            }
+
+        
+
+            Stopwatch2D.Stop();<br>
+            var StopwatchJagged = Stopwatch.StartNew();<br>
+            for (int i = 0; i < max; i++)<br>
+            {
+                for (int j = 0; j < 100; j++)<br>
+                {
+                    for (int k = 0; k < 100; k++)<br>
+                    {
+                        ArrJagged[j][k] = k;<br>
+                    }
+                }
+            }
+            StopwatchJagged.Stop();<br>
+            Console.Write("\n Time taken for allocation in case of 2D array");<br>
+            Console.WriteLine(Stopwatch2D.Elapsed.TotalMilliseconds + "miliseconds");<br>
+            Console.WriteLine("\n time taken for aalocation in case of jagged array:");<br>
+            Console.WriteLine(StopwatchJagged.Elapsed.TotalMilliseconds + "miliseconds");<br>
+        }
+    }
+}
+
+
+![image](https://user-images.githubusercontent.com/97940767/154634014-476b1b3f-34e9-45c6-8532-966811cd18a8.png)
+
+
+
 
 
 
