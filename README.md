@@ -940,9 +940,46 @@ public class SumExample
 OUTPUT:
 ![image](https://user-images.githubusercontent.com/97940767/155664277-6a2e5a75-0656-4dd2-8e41-51add238c831.png)
 
+21. TO REVERSE A NUMBER
 
+using System;
+public class ReverseExample
+{
+    public static void Main(string[] args)
+    {
+        int n, reverse = 0, rem;
+        Console.Write("Enter a number: ");
+        n = int.Parse(Console.ReadLine());
+        while (n != 0)
+        {
+            rem = n % 10;
+            reverse = reverse * 10 + rem;
+            n /= 10;
+        }
+        Console.Write("Reversed Number: " + reverse);
+    }
+}
 
+OUTPUT:
+![image](https://user-images.githubusercontent.com/97940767/155664890-f968f1f6-95e3-4c0a-8ca9-f27118ea63e0.png)
 
+22. PROGRAM TO SWAP A NUMBER
+
+using System;
+public class SwapExample
+{
+    public static void Main(string[] args)
+    {
+        int a = 5, b = 10;
+        Console.WriteLine("Before swap a= " + a + " b= " + b);
+        a = a * b; //a=50 (5*10)      
+        b = a / b; //b=5 (50/10)      
+        a = a / b; //a=10 (50/5)    
+        Console.Write("After swap a= " + a + " b= " + b);
+    }
+}
+
+OUTPUT:
 
 
 
