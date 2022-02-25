@@ -654,6 +654,89 @@ namespace ex12<br>
 ![image](https://user-images.githubusercontent.com/97940767/154637902-a7528741-ce03-4ae4-86fc-f33c2709cfb1.png)
 ![image](https://user-images.githubusercontent.com/97940767/154637983-8507a495-0559-4e38-94ef-24958184f8cf.png)
 
+13.INCREAMENT ICOMPARABLE INTERFACE
+using System;
+
+namespace ex13
+{
+    class Fraction : IComparable
+    {
+        int z, n;
+        public Fraction(int z, int n)
+        {
+            this.z = z;
+            this.n = n;
+        }
+        public static Fraction operator +(Fraction a, Fraction b)
+        {
+            return new Fraction(a.z * b.n + a.n * b.z, a.n * b.n);
+        }
+        public static Fraction operator *(Fraction a, Fraction b)
+        {
+            return new Fraction(a.z * b.z, a.n * b.n);
+        }
+        public int CompareTo(object obj)
+        {
+            Fraction f = (Fraction)obj;
+            if ((float) z / n < (float)f.z / f.n)
+                    return -1;
+            else if ((float) z / n > (float)f.z / f.n )
+                    return 1;
+            else
+                return 0;
+        }
+        public override string ToString()
+        {
+            return z + "/" + n;
+        }
+    }
+    class ICompInterface
+    {
+        public static void Main()
+        {
+            Fraction[] a =
+            {
+
+                 new Fraction(5,2),
+                 new Fraction(29,6),
+                 new Fraction(4,5),
+                 new Fraction(10,8),
+                 new Fraction(34,7),
+            };
+            Array.Sort(a);
+            Console.WriteLine("Implementing the IComparable Interface in " + " Displaying Fraction:");
+            foreach(Fraction f in a)
+            {
+                Console.WriteLine(f + " ");
+            }
+            Console.WriteLine();
+            Console.ReadLine();
+        }
+    }
+
+        
+    
+}
+OUTPUT:
+![image](https://user-images.githubusercontent.com/97940767/155658749-141fdd61-ab31-49c7-8513-344a66d01fb6.png)
+
+14.CREATE PROGRAM TO CREATE THREAD POOLS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
