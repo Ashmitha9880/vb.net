@@ -896,7 +896,49 @@ OUTPUT:
 ![image](https://user-images.githubusercontent.com/97940767/155662884-598030bb-f4df-4270-9f3a-43e66f8302a2.png)
 
 
+19. To find factorial number
 
+using System;
+public class FactorialExample
+{
+    public static void Main(string[] args)
+    {
+        int i, fact = 1, number;
+        Console.Write("Enter any Number: ");
+        number = int.Parse(Console.ReadLine());
+        for (i = 1; i <= number; i++)
+        {
+            fact = fact * i;
+        }
+        Console.Write("Factorial of " + number + " is: " + fact);
+    }
+}
+
+output:
+![image](https://user-images.githubusercontent.com/97940767/155663864-28d58d00-2d0f-461d-84db-c8364ca49d68.png)
+
+20.To find some of digit
+
+using System;
+public class SumExample
+{
+    public static void Main(string[] args)
+    {
+        int n, sum = 0, m;
+        Console.Write("Enter a number: ");
+        n = int.Parse(Console.ReadLine());
+        while (n > 0)
+        {
+            m = n % 10;
+            sum = sum + m;
+            n = n / 10;
+        }
+        Console.Write("Sum is= " + sum);
+    }
+}
+
+OUTPUT:
+![image](https://user-images.githubusercontent.com/97940767/155664277-6a2e5a75-0656-4dd2-8e41-51add238c831.png)
 
 
 
