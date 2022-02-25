@@ -813,171 +813,190 @@ public class  AgeIsNegativeException : Exception<br>
 }<br>
 
 OUTPUT:
+
+
+
 ![image](https://user-images.githubusercontent.com/97940767/155659824-ddd7a9bb-39ab-407d-9f65-991117b4fc57.png)
 
-16. FIBBONOCCI NUMBERS
+**16. FIBBONOCCI NUMBERS**
 
-using System;
-public class FibonacciExample
-{
-    public static void Main(string[] args)
-    {
-        int n1 = 0, n2 = 1, n3, i, number;
-        Console.Write("Enter the number of elements: ");
-        number = int.Parse(Console.ReadLine());
-        Console.Write(n1 + " " + n2 + " "); //printing 0 and 1    
-        for (i = 2; i < number; ++i) //loop starts from 2 because 0 and 1 are already printed    
-        {
-            n3 = n1 + n2;
-            Console.Write(n3 + " ");
-            n1 = n2;
-            n2 = n3;
-        }
-    }
-}
+using System;<br>
+public class FibonacciExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int n1 = 0, n2 = 1, n3, i, number;<br>
+        Console.Write("Enter the number of elements: ");<br>
+        number = int.Parse(Console.ReadLine());<br>
+        Console.Write(n1 + " " + n2 + " "); //printing 0 and 1  <br>  
+        for (i = 2; i < number; ++i) //loop starts from 2 because 0 and 1 are already printed    <br>
+        {<br>
+            n3 = n1 + n2;<br>
+            Console.Write(n3 + " ");<br>
+            n1 = n2;<br>
+            n2 = n3;<br>
+        }<br><br>
+    }<br>
+}<br>
 
 OUTPUT:
+
+
 
 ![image](https://user-images.githubusercontent.com/97940767/155660585-c39f8d95-9e35-4393-9a09-4f2cc4619ece.png)
 
-17.PRIME NUMBER
-using System;
-public class PrimeNumberExample
-{
-    public static void Main(string[] args)
-    {
-        int n, i, m = 0, flag = 0;
-        Console.Write("Enter the Number to check Prime: ");
-        n = int.Parse(Console.ReadLine());
-        m = n / 2;
-        for (i = 2; i <= m; i++)
-        {
-            if (n % i == 0)
-            {
-                Console.Write("Number is not Prime.");
-                flag = 1;
-                break;
-            }
-        }
-        if (flag == 0)
-            Console.Write("Number is Prime.");
-    }
-}
+**17.PRIME NUMBER**
+using System;<br>
+public class PrimeNumberExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int n, i, m = 0, flag = 0;<br>
+        Console.Write("Enter the Number to check Prime: ");<br>
+        n = int.Parse(Console.ReadLine());<br>
+        m = n / 2;<br>
+        for (i = 2; i <= m; i++)<br>
+        {<br>
+            if (n % i == 0)<br>
+            {<br>
+                Console.Write("Number is not Prime.");<br>
+                flag = 1;<br>
+                break;<br>
+            }<br>
+        }<br>
+        if (flag == 0)<br>
+            Console.Write("Number is Prime.");<br>
+    }<br>
+}<br>
 
 OUTPUT:
+
 
 ![image](https://user-images.githubusercontent.com/97940767/155662032-c3cd5196-ed11-45cb-9170-c0e4979fe4a6.png)
 
 
-18. PALINDROME OR NOT
 
-using System;
-public class PalindromeExample
-{
-    public static void Main(string[] args)
-    {
-        int n, r, sum = 0, temp;
-        Console.Write("Enter the Number: ");
-        n = int.Parse(Console.ReadLine());
-        temp = n;
-        while (n > 0)
-        {
-            r = n % 10;
-            sum = (sum * 10) + r;
-            n = n / 10;
-        }
-        if (temp == sum)
-            Console.Write("Number is Palindrome.");
-        else
-            Console.Write("Number is not Palindrome");
-    }
-}
+**18. PALINDROME OR NOT**
+using System;<br>
+public class PalindromeExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int n, r, sum = 0, temp;<br>
+        Console.Write("Enter the Number: ");<br>
+        n = int.Parse(Console.ReadLine());<br>
+        temp = n;<br>
+        while (n > 0)<br>
+        {<br>
+            r = n % 10;<br>
+            sum = (sum * 10) + r;<br>
+            n = n / 10;<br>
+        }<br>
+        if (temp == sum)<br>
+            Console.Write("Number is Palindrome.");<br>
+        else<br>
+            Console.Write("Number is not Palindrome");<br>
+    }<br>
+}<br>
 OUTPUT:
+
 ![image](https://user-images.githubusercontent.com/97940767/155662884-598030bb-f4df-4270-9f3a-43e66f8302a2.png)
 
 
-19. To find factorial number
 
-using System;
-public class FactorialExample
-{
-    public static void Main(string[] args)
-    {
-        int i, fact = 1, number;
-        Console.Write("Enter any Number: ");
-        number = int.Parse(Console.ReadLine());
-        for (i = 1; i <= number; i++)
-        {
-            fact = fact * i;
-        }
-        Console.Write("Factorial of " + number + " is: " + fact);
-    }
-}
+**19. To find factorial number**
+
+using System;<br>
+public class FactorialExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int i, fact = 1, number;<br>
+        Console.Write("Enter any Number: ");<br>
+        number = int.Parse(Console.ReadLine());<br>
+        for (i = 1; i <= number; i++)<br>
+        {<br>
+            fact = fact * i;<br>
+        }<br>
+        Console.Write("Factorial of " + number + " is: " + fact);<br>
+    }<br>
+}<br>
 
 output:
+
+
 ![image](https://user-images.githubusercontent.com/97940767/155663864-28d58d00-2d0f-461d-84db-c8364ca49d68.png)
 
-20.To find some of digit
 
-using System;
-public class SumExample
-{
-    public static void Main(string[] args)
-    {
-        int n, sum = 0, m;
-        Console.Write("Enter a number: ");
-        n = int.Parse(Console.ReadLine());
-        while (n > 0)
-        {
-            m = n % 10;
-            sum = sum + m;
-            n = n / 10;
-        }
-        Console.Write("Sum is= " + sum);
-    }
-}
+
+**20.To find some of digit**
+
+using System;<br>
+public class SumExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int n, sum = 0, m;<br>
+        Console.Write("Enter a number: ");<br>
+        n = int.Parse(Console.ReadLine());<br>
+        while (n > 0)<br>
+        {<br>
+            m = n % 10;<br>
+            sum = sum + m;<br>
+            n = n / 10;<br>
+        }<br>
+        Console.Write("Sum is= " + sum);<br>
+    }<br>
+}<br>
 
 OUTPUT:
+
+
+
 ![image](https://user-images.githubusercontent.com/97940767/155664277-6a2e5a75-0656-4dd2-8e41-51add238c831.png)
 
-21. TO REVERSE A NUMBER
+**21. TO REVERSE A NUMBER**
 
-using System;
-public class ReverseExample
-{
-    public static void Main(string[] args)
-    {
-        int n, reverse = 0, rem;
-        Console.Write("Enter a number: ");
-        n = int.Parse(Console.ReadLine());
-        while (n != 0)
-        {
-            rem = n % 10;
-            reverse = reverse * 10 + rem;
-            n /= 10;
-        }
-        Console.Write("Reversed Number: " + reverse);
-    }
-}
+using System;<br>
+public class ReverseExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int n, reverse = 0, rem;<br>
+        Console.Write("Enter a number: ");<br>
+        n = int.Parse(Console.ReadLine());<br>
+        while (n != 0)<br>
+        {<br>
+            rem = n % 10;<br><br>
+            reverse = reverse * 10 + rem;<br>
+            n /= 10;<br>
+        }<br>
+        Console.Write("Reversed Number: " + reverse);<br>
+    }<br>
+}<br>
 
 OUTPUT:
+
+
 ![image](https://user-images.githubusercontent.com/97940767/155664890-f968f1f6-95e3-4c0a-8ca9-f27118ea63e0.png)
 
-22. PROGRAM TO SWAP A NUMBER
 
-using System;
-public class SwapExample
-{
-    public static void Main(string[] args)
-    {
-        int a = 5, b = 10;
-        Console.WriteLine("Before swap a= " + a + " b= " + b);
-        a = a * b; //a=50 (5*10)      
-        b = a / b; //b=5 (50/10)      
-        a = a / b; //a=10 (50/5)    
-        Console.Write("After swap a= " + a + " b= " + b);
-    }
-}
+
+**22. PROGRAM TO SWAP A NUMBER**
+
+using System;<br>
+public class SwapExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int a = 5, b = 10;<br>
+        Console.WriteLine("Before swap a= " + a + " b= " + b);<br>
+        a = a * b; //a=50 (5*10)   <br>   
+        b = a / b; //b=5 (50/10)  <br>    
+        a = a / b; //a=10 (50/5)   <br> 
+        Console.Write("After swap a= " + a + " b= " + b);<br>
+    }<br>
+}<br>
 
 OUTPUT:
 ![image](https://user-images.githubusercontent.com/97940767/155665793-d64307aa-dbd3-4f1d-a855-525576035294.png)
