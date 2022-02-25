@@ -869,6 +869,31 @@ OUTPUT:
 ![image](https://user-images.githubusercontent.com/97940767/155662032-c3cd5196-ed11-45cb-9170-c0e4979fe4a6.png)
 
 
+18. PALINDROME OR NOT
+
+using System;
+public class PalindromeExample
+{
+    public static void Main(string[] args)
+    {
+        int n, r, sum = 0, temp;
+        Console.Write("Enter the Number: ");
+        n = int.Parse(Console.ReadLine());
+        temp = n;
+        while (n > 0)
+        {
+            r = n % 10;
+            sum = (sum * 10) + r;
+            n = n / 10;
+        }
+        if (temp == sum)
+            Console.Write("Number is Palindrome.");
+        else
+            Console.Write("Number is not Palindrome");
+    }
+}
+OUTPUT:
+![image](https://user-images.githubusercontent.com/97940767/155662884-598030bb-f4df-4270-9f3a-43e66f8302a2.png)
 
 
 
