@@ -980,6 +980,7 @@ public class SwapExample
 }
 
 OUTPUT:
+![image](https://user-images.githubusercontent.com/97940767/155665793-d64307aa-dbd3-4f1d-a855-525576035294.png)
 
 
 
