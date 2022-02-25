@@ -722,11 +722,123 @@ OUTPUT:
 
 14.CREATE PROGRAM TO CREATE THREAD POOLS
 
+using System;
+using System.Threading;
 
 
+namespace ex14
+{
+    class ThreadPoolProg
+    {
+       public void ThreadFun1(object obj)
+        {
+            int loop = 0;
+            for( loop=0;loop<=4;loop++)
+            {
+                Console.WriteLine("Thread1 is executing");
+            }
+        }
+        public void ThreadFun2(object obj)
+        {
+            int loop = 0;
+            for(loop=0;loop<=4;loop++)
+            {
+                Console.WriteLine("Thread2 is executing");
+            }
+        }
+        public static void Main()
+        {
+            ThreadPoolProg TP = new ThreadPoolProg();
+            for(int i=0;i<2;i++)
+            {
+                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun1));
+                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun2));
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+OUTPUT:
+![image](https://user-images.githubusercontent.com/97940767/155659457-4bb5c9da-ec82-4ef6-aa57-f596d6a0e6de.png)
+
+15.TO DEMOSTRATE ERROR HANDLING USING TRY,CATCH,FINALLY BLOACK
+using System;
+
+namespace ex15
+{
+    class ExceptionHandling
+    {
+        static void Main(string[] args)
+        {
+            Age a = new Age();
+            try
+            {
+                a.displayAge();
+            }
+            catch (AgeIsNegativeException e)
+            {
+                Console.WriteLine("AgeIsNegativeException {0}", e.Message);
+            }
+             finally
+            {
+                Console.WriteLine("Execution of Finally block is done");
+            }
+        }
+    }
+}
+public class  AgeIsNegativeException : Exception
+{
+    public AgeIsNegativeException ( string message):base(message)
+    {
+
+    }
+} 
+    public class Age
+{
+    int age = -5;
+    public void displayAge()
+    {
+        if(age<0)
+        {
+            throw (new AgeIsNegativeException("Age cannot be negative"));
+        }
+        else
+        {
+            Console.WriteLine("Age is :{0}", age);
+        }
+    }
 
 
+}
 
+OUTPUT:
+![image](https://user-images.githubusercontent.com/97940767/155659824-ddd7a9bb-39ab-407d-9f65-991117b4fc57.png)
+
+16. FIBBONOCCI NUMBERS
+
+using System;
+public class FibonacciExample
+{
+    public static void Main(string[] args)
+    {
+        int n1 = 0, n2 = 1, n3, i, number;
+        Console.Write("Enter the number of elements: ");
+        number = int.Parse(Console.ReadLine());
+        Console.Write(n1 + " " + n2 + " "); //printing 0 and 1    
+        for (i = 2; i < number; ++i) //loop starts from 2 because 0 and 1 are already printed    
+        {
+            n3 = n1 + n2;
+            Console.Write(n3 + " ");
+            n1 = n2;
+            n2 = n3;
+        }
+    }
+}
+
+OUTPUT:
+
+![image](https://user-images.githubusercontent.com/97940767/155660585-c39f8d95-9e35-4393-9a09-4f2cc4619ece.png)
 
 
 
