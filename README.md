@@ -840,9 +840,33 @@ OUTPUT:
 
 ![image](https://user-images.githubusercontent.com/97940767/155660585-c39f8d95-9e35-4393-9a09-4f2cc4619ece.png)
 
+17.PRIME NUMBER
+using System;
+public class PrimeNumberExample
+{
+    public static void Main(string[] args)
+    {
+        int n, i, m = 0, flag = 0;
+        Console.Write("Enter the Number to check Prime: ");
+        n = int.Parse(Console.ReadLine());
+        m = n / 2;
+        for (i = 2; i <= m; i++)
+        {
+            if (n % i == 0)
+            {
+                Console.Write("Number is not Prime.");
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 0)
+            Console.Write("Number is Prime.");
+    }
+}
 
+OUTPUT:
 
-
+![image](https://user-images.githubusercontent.com/97940767/155662032-c3cd5196-ed11-45cb-9170-c0e4979fe4a6.png)
 
 
 
