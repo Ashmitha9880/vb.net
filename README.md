@@ -1047,15 +1047,36 @@ namespace ex26
 ![image](https://user-images.githubusercontent.com/97940767/156508900-d1b57b27-59b1-435e-a6f0-235aff780857.png)
 
 
+**24. TO CONVERT DECIMAL TO BINARY**
+
+using System;
+public class ConversionExample
+{
+    public static void Main(string[] args)
+    {
+        int n, i;
+        int[] a = new int[10];
+        Console.Write("Enter the number to convert: ");
+        n = int.Parse(Console.ReadLine());
+        for (i = 0; n > 0; i++)
+        {
+            a[i] = n % 2;
+            n = n / 2;
+        }
+        Console.Write("Binary of the given number= ");
+        for (i = i - 1; i >= 0; i--)
+        {
+            Console.Write(a[i]);
+        }
+    }
+}
 
 
 
+**OUTPUT:**
 
 
-
-
-
-
+![image](https://user-images.githubusercontent.com/97940767/156509333-9e210afc-43af-45fc-bd9d-8f13d8001f11.png)
 
 
 
