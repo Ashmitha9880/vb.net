@@ -654,7 +654,7 @@ namespace ex12<br>
 ![image](https://user-images.githubusercontent.com/97940767/154637902-a7528741-ce03-4ae4-86fc-f33c2709cfb1.png)
 ![image](https://user-images.githubusercontent.com/97940767/154637983-8507a495-0559-4e38-94ef-24958184f8cf.png)
 
-13.INCREAMENT ICOMPARABLE INTERFACE
+**13.INCREAMENT ICOMPARABLE INTERFACE**
 using System;
 
 namespace ex13
@@ -1002,6 +1002,77 @@ OUTPUT:
 
 
 ![image](https://user-images.githubusercontent.com/97940767/155665793-d64307aa-dbd3-4f1d-a855-525576035294.png)
+
+ 
+ **EXAMPLE:**
+**23.TO PRINT NUMBER TRIANGLE
+**
+
+using System;
+
+namespace ex26
+{
+    public class Printexample
+    {
+         public static void Main(string[] args)
+        {
+            int i, j, k, l, n;
+
+            Console.WriteLine("Enter the range=");
+            n = int.Parse(Console.ReadLine());
+            for(i=1;i<=n;i++)
+            {
+                for(j=1;j<=n-i;j++)
+                {
+                    Console.Write(" ");
+                }
+                for(k=1;k<=i;k++)
+                {
+                    Console.Write(k);
+
+                }
+                for(l=i-1;l>=1;l--)
+                {
+                    Console.Write(l);
+
+                }
+                  Console.Write("\n");
+            }
+        }
+    }
+}
+
+**OUTPUT:**
+
+![image](https://user-images.githubusercontent.com/97940767/156508900-d1b57b27-59b1-435e-a6f0-235aff780857.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
