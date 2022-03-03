@@ -1176,6 +1176,53 @@ public class PrintExample<br>
 ![image](https://user-images.githubusercontent.com/97940767/156509929-d34a98cd-9e72-4447-8a5d-7ae16ec87d6b.png)
 
 
+**27. FIBONOCCI TRIANGLE**
+
+using System;<br>
+
+namespace example;<br>
+{
+     public class Printexample;<br>;<br>
+    {<br>
+       public static void Main(string[] args)<br>
+        {;<br>
+            int a = 0,b=1,i,c,n,j ;;<br>
+            Console.Write("Enter the limits");<br>
+            n = int.Parse(Console.ReadLine());<br>;<br>
+            for(i=1;i<=n;i++)<br>
+            {<br>
+                a = 0;<br>
+                b = 1;<br>
+                Console.Write(b + "\t");<br>
+                for(j=1;j<i;j++)<br>
+                {<br>
+                    c = a + b;;<br>
+                    Console.Write(c + "\t");<br>
+                    a = b;<br>
+                    b = c;<br>
+                }<br>
+                Console.Write("\n");<br>
+            }<br>
+           
+        }<br>
+    }<br>
+}<br>
+
+**OUTPUT:**
+
+![image](https://user-images.githubusercontent.com/97940767/156514845-89f6c83f-d3e4-4582-ae3b-68db42ea7df0.png)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
