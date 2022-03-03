@@ -1078,15 +1078,102 @@ public class ConversionExample
 
 ![image](https://user-images.githubusercontent.com/97940767/156509333-9e210afc-43af-45fc-bd9d-8f13d8001f11.png)
 
+**25. NUMBER IN CHARCTER**
+
+
+using System;
+public class ConversionExample
+{
+    public static void Main(string[] args)
+    {
+        int n, sum = 0, r;
+        Console.Write("Enter the Number= ");
+        n = int.Parse(Console.ReadLine());
+        while (n > 0)
+        {
+            r = n % 10;
+            sum = sum * 10 + r;
+            n = n / 10;
+        }
+        n = sum;
+        while (n > 0)
+        {
+            r = n % 10;
+            switch (r)
+            {
+                case 1:
+                    Console.Write("one ");
+                    break;
+                case 2:
+                    Console.Write("two ");
+                    break;
+                case 3:
+                    Console.Write("three ");
+                    break;
+                case 4:
+                    Console.Write("four ");
+                    break;
+                case 5:
+                    Console.Write("five ");
+                    break;
+                case 6:
+                    Console.Write("six ");
+                    break;
+                case 7:
+                    Console.Write("seven ");
+                    break;
+                case 8:
+                    Console.Write("eight ");
+                    break;
+                case 9:
+                    Console.Write("nine ");
+                    break;
+                case 0:
+                    Console.Write("zero ");
+                    break;
+                default:
+                    Console.Write("tttt ");
+                    break;
+            }//end of switch      
+            n = n / 10;
+        }//end of while loop       
+    }
+}
 
 
 
+**OUTPUT:**
+
+![image](https://user-images.githubusercontent.com/97940767/156509607-d4ebabd5-a948-4e24-8a36-dc2e98eb7c89.png)
+
+**26.ALPHABET TRIANGLE**
+
+using System;
+public class PrintExample
+{
+    public static void Main(string[] args)
+    {
+        char ch = 'A';
+        int i, j, k, m;
+        for (i = 1; i <= 5; i++)
+        {
+            for (j = 5; j >= i; j--)
+                Console.Write(" ");
+            for (k = 1; k <= i; k++)
+                Console.Write(ch++);
+            ch--;
+            for (m = 1; m < i; m++)
+                Console.Write(--ch);
+            Console.Write("\n");
+            ch = 'A';
+        }
+    }
+}
 
 
+**OUTPUT:**
 
-
-
-
+![image](https://user-images.githubusercontent.com/97940767/156509929-d34a98cd-9e72-4447-8a5d-7ae16ec87d6b.png)
 
 
 
