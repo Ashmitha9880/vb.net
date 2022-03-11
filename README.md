@@ -1302,6 +1302,68 @@ OUTPUT:
 ![image](https://user-images.githubusercontent.com/97940767/157811446-b77dd21d-7724-4ed1-a02b-2f06beef44c1.png)
 
 
+2. PROGRAM TO REVERSE ,TRIM, PADDING A NUMBER
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ex4
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string inputString, revstr = "";
+            int Length;
+            inputString = txtInput.Text;
+            Length = inputString.Length - 1;
+            while (Length >= 0)
+            {
+                revstr = revstr + inputString[Length];
+                Length--;
+            }
+            MessageBox.Show("Reverse String Is : " + revstr, "Result");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string inputString;
+            inputString = txtInput.Text;
+            MessageBox.Show("The String After Trimming : " + inputString.Trim(), "Result");
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string inputString;
+            inputString = txtInput.Text;
+            inputString = inputString.PadLeft(10, '*');
+            inputString = inputString.PadRight(15, '*');
+            MessageBox.Show("String After Padding : " + inputString, "Result");
+
+        }
+    }
+}
+
+Output:
+
+
+![image](https://user-images.githubusercontent.com/97940767/157821183-7a9d2661-9d90-4d8a-ba94-5edccbecb7ec.png)
+![image](https://user-images.githubusercontent.com/97940767/157821287-fc76bb8e-97b0-49e1-b13d-c39e27fb892a.png)
+![image](https://user-images.githubusercontent.com/97940767/157821364-207e1d86-4b80-4644-9911-12b1d125a0a0.png)
+![image](https://user-images.githubusercontent.com/97940767/157821421-cd64dc22-9260-459f-a2f2-c4fe0384e571.png)
 
 
 
