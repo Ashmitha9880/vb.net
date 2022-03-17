@@ -1410,8 +1410,10 @@ namespace ex5<br>
 }
 <br>
 
+OUTPUT:
 
-
+![image](https://user-images.githubusercontent.com/97940767/158746060-0c2ee69a-889e-42b0-81f5-99da9fac25e9.png)
+![image](https://user-images.githubusercontent.com/97940767/158746145-abd080de-67ee-4908-b3c0-dcc5153e817e.png)
 
 
 
