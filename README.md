@@ -1416,6 +1416,52 @@ OUTPUT:
 ![image](https://user-images.githubusercontent.com/97940767/158746145-abd080de-67ee-4908-b3c0-dcc5153e817e.png)
 
 
+**4 DEVELOP A WINDOW APPLICATION TO CREATE FLAT CLOCK**
+using System;<br>
+using System.Collections.Generic;<br>
+using System.ComponentModel;<br>
+using System.Data;<br>
+using System.Drawing;<br>
+using System.Linq;<br>
+using System.Text;
+using System.Threading.Tasks;<br>
+using System.Windows.Forms;<br>
+
+namespace ex6<br>
+{<br>
+    public partial class Form1 : Form<br>
+    {<br>
+        public Form1()<br>
+        {<br>
+            InitializeComponent();<br>
+            timer1.Start();<br>
+        }<br>
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            System.Timers.Timer timer = new System.Timers.Timer();
+            timer.Interval = 1000;//1s
+            timer.Elapsed += Timer_Elapsed;
+            timer.Start();
+        }
+        private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            circularProgressBar1.Invoke((MethodInvoker)delegate
+            {
+                circularProgressBar1.Text = DateTime.Now.ToString("hh:mm:ss");
+                circularProgressBar1.SubscriptText = DateTime.Now.ToString("tt");//AM or PM
+                }); 
+            }
+        }
+
+    }
+
+OUTPUT:
+
+![image](https://user-images.githubusercontent.com/97940767/158756050-6925eae5-858a-4dc3-a327-2ba90227d95d.png)
+![image](https://user-images.githubusercontent.com/97940767/158756143-2a8a6ff3-3a30-468d-b79e-86a654d5d36b.png)
+
+
 
 
 
