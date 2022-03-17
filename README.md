@@ -1217,24 +1217,24 @@ WINDOWS APPLICATION
 
 1. CONVERT DIGITS INTO WEORDS
 
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System;<br>
+using System.Collections.Generic;<br>
+using System.ComponentModel;<br>
+using System.Data;<br>
+using System.Drawing;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading.Tasks;<br>
+using System.Windows.Forms;<br>
 
-namespace ex2
-{
-    public partial class Form1 : Form
-    {
-        public Form1()
-        {
-            InitializeComponent();
-        }
+namespace ex2<br>
+{<br>
+    public partial class Form1 : Form<br>
+    {<br>
+        public Form1()<br>
+        {<br>
+            InitializeComponent();<br>
+        }<br>
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -1304,24 +1304,24 @@ OUTPUT:
 
 2. PROGRAM TO REVERSE ,TRIM, PADDING A NUMBER
 
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System;<br>
+using System.Collections.Generic;<br>
+using System.ComponentModel;<br>
+using System.Data;<br>
+using System.Drawing;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading.Tasks;<br>
+using System.Windows.Forms;<br>
 
-namespace ex4
+namespace ex4<br>
 {
-    public partial class Form1 : Form
-    {
-        public Form1()
+    public partial class Form1 : Form<br>
+    {<br>
+        public Form1()<br>
         {
-            InitializeComponent();
-        }
+            InitializeComponent();<br>
+        }<br>
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -1365,9 +1365,50 @@ Output:
 ![image](https://user-images.githubusercontent.com/97940767/157821364-207e1d86-4b80-4644-9911-12b1d125a0a0.png)
 ![image](https://user-images.githubusercontent.com/97940767/157821421-cd64dc22-9260-459f-a2f2-c4fe0384e571.png)
 
+**3.TO CREATYE A PROGRESS BAR**
 
+using System;<br>
+using System.Collections.Generic;<br>
+using System.ComponentModel;<br>
+using System.Data;<br>
+using System.Drawing;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading;<br>
+using System.Windows.Forms;<br>
 
+namespace ex5<br>
+{<br>
+    public partial class Form1 : Form<br>
+    {
+        public Form1()<br>
+        {<br>
+            InitializeComponent();<br>
+        }<br>
 
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            for(int i=1;i<=100;i++)
+            {
+                Thread.Sleep(50);
+                backgroundWorker1.ReportProgress(i);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            backgroundWorker1.WorkerReportsProgress = true;
+            backgroundWorker1.RunWorkerAsync();
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar1.Value = e.ProgressPercentage;
+            this.Text = "Progress: " + e.ProgressPercentage.ToString() + "%";
+        }
+    }
+}
+<br>
 
 
 
