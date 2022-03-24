@@ -1480,18 +1480,18 @@ using System.Windows.Forms;
 <br>
 namespace lab9<br>
 {<br>
-    public partial class Form1 : Form
-    {// Intialising component  
-        static Random r = new Random();
-        int value;
-        int guessnum;
-        int win = 10;
-        int guess = 1;
-        Button button1;
-        TextBox textBox1;
-        RichTextBox richTextBox1;
-        RichTextBox richTextBox2;
-        Label label4;
+    public partial class Form1 : Form<br>
+    {// Intialising component  <br>
+        static Random r = new Random();<br>
+        int value;<br>
+        int guessnum;<br>
+        int win = 10;<br>
+        int guess = 1;<br>
+        Button button1;<br>
+        TextBox textBox1;<br>
+        RichTextBox richTextBox1;<br>
+        RichTextBox richTextBox2;<br>
+        Label label4;<br>
 
         public Form1()
         {
