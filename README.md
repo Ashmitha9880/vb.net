@@ -1696,6 +1696,10 @@ namespace lab9
     }
 }
 
+**OUTPUT:**
+
+![image](https://user-images.githubusercontent.com/97940332/159858746-9502a8ed-b304-48b7-b459-85fa7ccafd6a.png)
+
 
 
 
