@@ -1606,33 +1606,33 @@ namespace ex14<br>
         void initializeComponents()<br>
         {<br>
             this.Text = "My notepad";<br>
-            this.MinimumSize = new Size(600, 450);
-            this.FormClosing += new FormClosingEventHandler(NotepadClosing); this.MaximizeBox = true;
-            toolBar = new ToolBar();
-            toolBar.Font = new Font("Arial", 16);
-            toolBar.Padding = new Padding(4);
-            toolBar.ButtonClick += new ToolBarButtonClickEventHandler(toolBarClicked);
-            ToolBarButton toolBarButton1 = new ToolBarButton(); 
-            ToolBarButton toolBarButton2 = new ToolBarButton();
-            ToolBarButton toolBarButton3 = new ToolBarButton();
-            toolBarButton1.Text = "New";
-            toolBarButton2.Text = "Open";
-            toolBarButton3.Text = "Save";
-            toolBar.Buttons.Add(toolBarButton1);
-            toolBar.Buttons.Add(toolBarButton2);
-            toolBar.Buttons.Add(toolBarButton3);
-            txtContent = new RichTextBox();
-            txtContent.Size = this.ClientSize;
-            txtContent.Height -= toolBar.Height;
-            txtContent.Top = toolBar.Height;
-            txtContent.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
-            txtContent.Font = new Font("Arial", 16);
-            txtContent.AcceptsTab = true;
-            txtContent.Padding = new Padding(8);
+            this.MinimumSize = new Size(600, 450);<br>
+            this.FormClosing += new FormClosingEventHandler(NotepadClosing); this.MaximizeBox = true;<br>
+            toolBar = new ToolBar();<br>
+            toolBar.Font = new Font("Arial", 16);<br>
+            toolBar.Padding = new Padding(4);<br>
+            toolBar.ButtonClick += new ToolBarButtonClickEventHandler(toolBarClicked);<br>
+            ToolBarButton toolBarButton1 = new ToolBarButton(); <br>
+            ToolBarButton toolBarButton2 = new ToolBarButton();<br>
+            ToolBarButton toolBarButton3 = new ToolBarButton();<br>
+            toolBarButton1.Text = "New";<br>
+            toolBarButton2.Text = "Open";<br>
+            toolBarButton3.Text = "Save";<br>
+            toolBar.Buttons.Add(toolBarButton1);<br>
+            toolBar.Buttons.Add(toolBarButton2);<br>
+            toolBar.Buttons.Add(toolBarButton3);<br>
+            txtContent = new RichTextBox();<br>
+            txtContent.Size = this.ClientSize;<br>
+            txtContent.Height -= toolBar.Height;<br>
+            txtContent.Top = toolBar.Height;<br>
+            txtContent.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;<br>
+            txtContent.Font = new Font("Arial", 16);<br>
+            txtContent.AcceptsTab = true;<br>
+            txtContent.Padding = new Padding(8);<br>
 
-            this.Controls.Add(toolBar);
-            this.Controls.Add(txtContent);
-        }
+            this.Controls.Add(toolBar);<br>
+            this.Controls.Add(txtContent);<br>
+        }<br>
         private void toolBarClicked(Object sender, ToolBarButtonClickEventArgs e)
         {
             saveFile();
