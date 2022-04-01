@@ -1948,15 +1948,15 @@ namespace ex16<br>
             }<br>
             if (rNodeImg != null)<br><br>
             {<br>
-                g.DrawImage(rNodeImg, lSize.Width, nodeBg.Size.Height + 35); x2 = rCenter + lSize.Width;
-                w = Math.Abs(x2 - x1);
-                var points = new List<PointF>
- {
- new PointF(x1, y1),
- new PointF(x1 + w/6, y1 + h/3.5f),
- new PointF(x2 - w/6, y2 - h/3.5f),
- new PointF(x2, y2)
- };
+                g.DrawImage(rNodeImg, lSize.Width, nodeBg.Size.Height + 35); x2 = rCenter + lSize.Width;<br>
+                w = Math.Abs(x2 - x1);<br>
+                var points = new List<PointF><br>
+ {<br>
+ new PointF(x1, y1),<br>
+ new PointF(x1 + w/6, y1 + h/3.5f),<br>
+ new PointF(x2 - w/6, y2 - h/3.5f),<br>
+ new PointF(x2, y2)<br>
+ };<br>
 
                 g.DrawCurve(pen, points.ToArray(), 0.5f);
             }
