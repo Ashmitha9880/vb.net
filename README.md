@@ -1977,6 +1977,7 @@ namespace ex16<br>
 
 **OUTPUT:  **      
     
+![image](https://user-images.githubusercontent.com/97940767/161211021-f009e57b-dc9d-4172-8912-ef68e2e459ac.png)
 
 
 
