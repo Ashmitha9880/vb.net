@@ -1692,22 +1692,22 @@ namespace ex14<br>
 
 **8.Develop an application to construct a graphical binary tree where  you need to create, add, search and remove nodes.**
 
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Drawing.Drawing2D;
+using System;<br>
+using System.Collections.Generic;<br>
+using System.ComponentModel;<br>
+using System.Data;<br>
+using System.Drawing;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading.Tasks;<br>
+using System.Windows.Forms;<br>
+using System.Drawing.Drawing2D;<br>
 
-namespace ex16
-{
-    public partial class Form1 : Form
-    {
-        private Node root;
+namespace ex16<br>
+{<br>
+    public partial class Form1 : Form<br>
+    {<br>
+        private Node root;<br>
 
 
         public Form1()
@@ -1939,15 +1939,15 @@ namespace ex16
             {
                 g.DrawImage(lNodeImg, 0, nodeBg.Size.Height + 35); var points1 = new List<PointF>
  {
- new PointF(x1, y1),
- new PointF(x1 - w/6, y1 + h/3.5f),
- new PointF(x2 + w/6, y2 - h/3.5f),
- new PointF(x2, y2),
- };
-                g.DrawCurve(pen, points1.ToArray(), 0.5f);
-            }
-            if (rNodeImg != null)
-            {
+ new PointF(x1, y1),<br>
+ new PointF(x1 - w/6, y1 + h/3.5f),<br>
+ new PointF(x2 + w/6, y2 - h/3.5f),<br>
+ new PointF(x2, y2),<br>
+ };<br>
+                g.DrawCurve(pen, points1.ToArray(), 0.5f);<br>
+            }<br>
+            if (rNodeImg != null)<br><br>
+            {<br>
                 g.DrawImage(rNodeImg, lSize.Width, nodeBg.Size.Height + 35); x2 = rCenter + lSize.Width;
                 w = Math.Abs(x2 - x1);
                 var points = new List<PointF>
