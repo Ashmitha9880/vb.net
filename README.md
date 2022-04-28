@@ -1980,7 +1980,100 @@ namespace ex16<br>
 ![image](https://user-images.githubusercontent.com/97940767/161211021-f009e57b-dc9d-4172-8912-ef68e2e459ac.png)
 
 
+**9.CONVERT THE MONEY TRANSLATION**
+    
+    
+    using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
+namespace money_traslation
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            {
+                label4.Visible = true;
+                if (textBox1.Text == "")
+                {
+                    label4.Text = "Enter the amount";
+                }
+                else
+                {
+                    Double convertedamt = Convert.ToDouble(textBox1.Text);
+                    if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "USD")
+                    {
+                        Double a = convertedamt / 74;
+                        label4.Text = a + "$";
+                    }
+                    else if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "SAR")
+                    {
+                        Double a = convertedamt / 17;
+                        label4.Text = a + "SAR";
+                    }
+                    else if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "EUR")
+                    {
+
+                        Double a = convertedamt / 11;
+                        label4.Text = a + "EUR";
+                    }
+                    else
+                    {
+                        label4.Text = "Please Enter the conversion code";
+                    }
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            label4.Text = "";
+
+
+        }
+    }
+}
+
+
+    
+    OUTPUT:
+    
+    
+    
+    ![image](https://user-images.githubusercontent.com/97940767/165697351-fc9cc80d-37c7-4d95-af5b-fb0ea8e40e7b.png)
+![image](https://user-images.githubusercontent.com/97940767/165697436-9752097c-26aa-40ee-b113-1635696818a1.png)
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 
